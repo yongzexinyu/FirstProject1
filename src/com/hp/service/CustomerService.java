@@ -58,11 +58,18 @@ public class CustomerService {
                 goHome();
                 break;
             case 5:
-                System.out.println("退出");
-                TestUtil.welcome();
-                System.exit(0);
-                goHome();
-                break;
+                System.out.println("是否继续你的操作yes/no(Y/N)");
+                Scanner sc=new Scanner(System.in);
+                String aa=sc.nextLine();
+                if(aa.equalsIgnoreCase("y")){
+                    TestUtil.welcome();
+                    System.exit(0);
+                    goHome();
+                    break;
+                }else if(aa.equalsIgnoreCase("n")){
+                    goHome();
+                }
+
         }
     }
 
